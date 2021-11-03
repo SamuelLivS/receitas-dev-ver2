@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;500;700&display=swap');
 :root {
-    --var-cian: rgb(8, 196, 196);
+    --var-cian: rgb(0, 195, 255);
     --var-black-opacity: rgba(0, 0, 0, 0.753);
 }
 
@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    color: white;
 }
 
 html {
@@ -18,8 +19,8 @@ html {
 body {
     font-size: 1.6rem;
     background: black;
-
 }
+
 
 /*HEADER*/
 
@@ -41,9 +42,9 @@ header {
     list-style: none;
 }
 
-.nav-links, .logo-link {
+.nav-links,
+.logo-link {
     text-decoration: none;
-    color: white;
 }
 
 .nav-links {
@@ -62,6 +63,7 @@ header {
     color: var(--var-cian);
 }
 
+
 /*MAIN*/
 
 #section-main {
@@ -74,10 +76,10 @@ header {
     background-size: cover;
 }
 
+
 /*Form aqui*/
 
 #main-div {
-    color: white;
     max-width: 400px;
     text-align: center;
     margin-right: 50px;
@@ -89,10 +91,12 @@ header {
     width: 100%;
     background: linear-gradient(transparent, black);
 }
+
+
 /*section with informations about us*/
+
 #section-information {
     min-height: 100vh;
-    color: white;
     padding-top: 50px;
 }
 
@@ -121,7 +125,7 @@ header {
     margin-top: 30px;
 }
 
-.img-container{
+.img-container {
     opacity: .6;
     width: 400px;
 }
@@ -131,17 +135,67 @@ header {
     height: auto;
 }
 
-.text-container{
+.text-container {
     max-width: 400px;
 }
 
-.text-container h3{
+.text-container h3 {
     margin-bottom: 20px;
     font-size: 3rem;
     line-height: 40px;
     color: var(--var-cian);
 }
 
-#we-community{
+.text-container p {
+    line-height: 25px;
+}
+
+#we-community {
     flex-direction: row-reverse;
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#foot-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navbar-footer {
+    width: 100%;
+    /* padding: 20px; */
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#navbar-footer::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--var-cian);
+    /* background-color: white; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-link,
+#attribution-link {
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.footer-link:hover,
+#attribution-link:hover {
+    color: var(--var-cian);
 }
