@@ -22,9 +22,56 @@
     <main>
         <section id="section-main">
             <div id="main-div">
-                <h1>Futuro form aqui</h1>
-                <form action="#">
-
+                <div id="form-option">
+                    <div class="link-option" onclick="loginForm()">
+                        Login
+                    </div>
+                    <div class="link-option" onclick="registerForm()">
+                        Register
+                    </div>
+                </div>
+                <form id="login" action="#">
+                    <div class="input-div">
+                        <label class="sr-only" for="email">Email</label>
+                        <input placeholder="example@example.com" type="email" name="email" id="email" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-div">
+                        <label class="sr-only" for="password">Senha</label>
+                        <input placeholder="Senha" type="password" name="password" id="password" required>
+                        <div class="underline"></div>
+                    </div>
+                    <button>
+                        Login
+                    </button>
+                </form>
+                <form id="register" action="#">
+                    <div class="input-div">
+                        <label class="sr-only" for="name">Nome</label>
+                        <input placeholder="Nome" type="text" name="name" id="name" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-div">
+                        <label class="sr-only" for="surname">Sobrenome</label>
+                        <input placeholder="Sobrenome" type="text" name="surname" id="surname" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-div">
+                        <label class="sr-only" for="phone">Telefone</label>
+                        <input placeholder="(xx) 9xxxx-xxxx" type="tel" name="phone" id="phone" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-div">
+                        <label class="sr-only" for="email_register">Email</label>
+                        <input placeholder="example@example.com" type="email" name="email_register" id="email_register" required>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="input-div">
+                        <label class="sr-only" for="password_register">Senha</label>
+                        <input placeholder="Senha" type="password_register" id="password_register" required>
+                        <div class="underline"></div>
+                    </div>
+                    <button>Register</button>
                 </form>
             </div>
         </section>
@@ -77,6 +124,21 @@
             <p>© 2021 <a id="attribution-link" href="#">DevStressados</a>, Inc.</p>
         </div>
     </footer>
+
+    <script>
+        let formLogin = document.getElementById('login')
+        let formRegister = document.getElementById('register')
+
+        function loginForm() {
+            formRegister.style.display = 'none'
+            formLogin.style.display = 'block'
+        }
+
+        function registerForm() {
+            formLogin.style.display = 'none'
+            formRegister.style.display = 'block'
+        }
+    </script>
 </body>
 
 </html>
