@@ -325,3 +325,21 @@ footer {
 #attribution-link:hover {
     color: var(--var-cian);
 }
+
+@media (max-width:600px) {
+    header {
+        display: none;
+    }
+    #section-main {
+        justify-content: center;
+    }
+    #main-div {
+        margin: 0;
+    }
+    #section-information {
+        margin: 0 10px;
+    }
+    .text-container {
+        text-align: center;
+    }
+}
