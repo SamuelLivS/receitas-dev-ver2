@@ -12,12 +12,19 @@
 
 <body>
     <header>
-        <h3><a class="logo-link" href="#">Receitas<span class="cyan">.dev</span></a></h3>
-        <ul class="navigation-bar active">
-            <li><a class="nav-links" href="#">Contact us</a></li>
-            <li><a class="nav-links" href="#">Posts</a></li>
-            <li><a class="nav-links" href="#">Comunity</a></li>
-        </ul>
+        <nav>
+            <a class="logo" href="/">Receitas<span class="cyan">.dev</span></a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="/">Contact us</a></li>
+                <li><a href="/">Comunity</a></li>
+                <li><a href="/">Posts</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="section-main">
@@ -78,7 +85,7 @@
         <div class="transition-bg"></div>
         <section id="section-information">
             <div id="title-information">
-                <h2>Explora nossa plataforma</h2>
+                <h2>Explore nossa plataforma</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eum corporis? Quas nesciunt maxime quidem atque dolores molestias dolorem fugiat, vero id, quisquam iste doloremque laudantium a eum suscipit voluptate.</p>
             </div>
             <article class="information-container" id="about-plataform">
@@ -138,6 +145,49 @@
             formLogin.style.display = 'none'
             formRegister.style.display = 'block'
         }
+
+        class MobileNavbar {
+            constructor(mobileMenu, navList, navLinks) {
+                this.mobileMenu = document.querySelector(mobileMenu)
+                this.navList = document.querySelector(navList)
+                this.navLinks = document.querySelectorAll(navLinks)
+                this.activeClass = 'active'
+                this.handleClick = this.handleClick.bind(this)
+            }
+
+            handleClick() {
+                this.navList.classList.toggle(this.activeClass)
+                this.mobileMenu.classList.toggle(this.activeClass)
+                document.body.classList.toggle('hidden')
+                this.animateLinks()
+            }
+
+            animateLinks() {
+                this.navLinks.forEach((link, index) => {
+                    link.style.animation ?
+                        (link.style.animation = '') :
+                        (link.style.animation = `navLinkFade .5s ease forwards ${index / 7 + 0.3}s`)
+                })
+
+            }
+
+            addClickEvent() {
+                this.mobileMenu.addEventListener('click', this.handleClick)
+            }
+
+            init() {
+                if (this.mobileMenu) {
+                    this.addClickEvent()
+                }
+                return this
+            }
+        }
+
+        const mobileNavbar = new MobileNavbar(
+            '.mobile-menu',
+            '.nav-list',
+            ' .nav-list li')
+        mobileNavbar.init()
     </script>
 </body>
 
