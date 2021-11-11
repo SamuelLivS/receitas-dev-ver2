@@ -23,9 +23,6 @@ body {
 }
 
 
-/*TÁ VAZANMDO O ESCOPO VAI PRA PUTA Q PARIU!!!!!!!!!!!!!!*/
-
-
 /*HEADER*/
 
 header {
@@ -128,6 +125,7 @@ nav {
 
 .hidden {
     overflow-Y: hidden;
+    height: 100vh;
 }
 
 
@@ -142,9 +140,6 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-
-/*Form aqui*/
 
 #main-div {
     min-width: 300px;
@@ -395,7 +390,6 @@ footer {
 
 @media (max-width: 800px) {
     header {
-        /*GARANTAAAAA QUE O JS FAZ ISSO AQUI!!!!!!!!!!!*/
         background: black;
     }
     .nav-list {
