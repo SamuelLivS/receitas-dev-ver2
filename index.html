@@ -6,21 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/coffee.png">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index-style.css">
     <title>Receitas.dev</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="logo" href="/">Receitas<span class="cyan">.dev</span></a>
+            <a class="logo" href="./index.html">Receitas<span class="cyan">.dev</span></a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
             <ul class="nav-list">
-                <li><a href="/">Contact us</a></li>
+                <li><a href="./contact.html">Contato</a></li>
                 <li><a href="/">Comunity</a></li>
                 <li><a href="/">Posts</a></li>
             </ul>
@@ -132,63 +133,8 @@
         </div>
     </footer>
 
-    <script>
-        let formLogin = document.getElementById('login')
-        let formRegister = document.getElementById('register')
-
-        function loginForm() {
-            formRegister.style.display = 'none'
-            formLogin.style.display = 'block'
-        }
-
-        function registerForm() {
-            formLogin.style.display = 'none'
-            formRegister.style.display = 'block'
-        }
-
-        class MobileNavbar {
-            constructor(mobileMenu, navList, navLinks) {
-                this.mobileMenu = document.querySelector(mobileMenu)
-                this.navList = document.querySelector(navList)
-                this.navLinks = document.querySelectorAll(navLinks)
-                this.activeClass = 'active'
-                this.handleClick = this.handleClick.bind(this)
-            }
-
-            handleClick() {
-                this.navList.classList.toggle(this.activeClass)
-                this.mobileMenu.classList.toggle(this.activeClass)
-                document.body.classList.toggle('hidden')
-                this.animateLinks()
-            }
-
-            animateLinks() {
-                this.navLinks.forEach((link, index) => {
-                    link.style.animation ?
-                        (link.style.animation = '') :
-                        (link.style.animation = `navLinkFade .5s ease forwards ${index / 7 + 0.3}s`)
-                })
-
-            }
-
-            addClickEvent() {
-                this.mobileMenu.addEventListener('click', this.handleClick)
-            }
-
-            init() {
-                if (this.mobileMenu) {
-                    this.addClickEvent()
-                }
-                return this
-            }
-        }
-
-        const mobileNavbar = new MobileNavbar(
-            '.mobile-menu',
-            '.nav-list',
-            ' .nav-list li')
-        mobileNavbar.init()
-    </script>
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/index-script.js"></script>
 </body>
 
 </html>
