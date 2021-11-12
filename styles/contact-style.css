@@ -1,0 +1,51 @@
+main {
+    height: 100vh;
+    background-image: url(../images/bg-contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-div {
+    max-width: 800px;
+    text-align: center;
+    background: var(--var-black-opacity);
+    padding: 50px 30px;
+    border-radius: 15px;
+}
+
+.contact-div h1 {
+    font-size: 6rem;
+    letter-spacing: 5px;
+}
+
+.contact-div p {
+    margin: 20px 0;
+}
+
+.contact-div form {
+    margin: auto;
+    width: 80%;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(128, 128, 128, 0.344);
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {}
+
+.contact-div form textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    margin: 10px 0;
+}
