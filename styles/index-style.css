@@ -126,13 +126,6 @@ button:hover {
     display: none;
 }
 
-.transition-bg {
-    margin-top: -100px;
-    height: 100px;
-    width: 100%;
-    background: linear-gradient(transparent, black);
-}
-
 
 /*section with informations about us*/
 
@@ -195,52 +188,6 @@ button:hover {
 
 #we-community {
     flex-direction: row-reverse;
-}
-
-
-/*Footer*/
-
-footer {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#foot-container {
-    max-width: 1000px;
-    font-weight: 300;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#navbar-footer {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#navbar-footer::after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: var(--var-cian);
-    opacity: .4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.footer-link,
-#attribution-link {
-    text-decoration: none;
-    transition: all .2s;
-}
-
-.footer-link:hover,
-#attribution-link:hover {
-    color: var(--var-cian);
 }
 
 @media (max-width:600px) {

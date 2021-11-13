@@ -51,16 +51,8 @@ input, textarea{
     background: rgba(110, 110, 110, 0.24);
 }
 
-input::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--var-cian);
-}
-
-input:focus:after, textarea:focus:after{
-    width: 100%;
+input{
+    width: 48%;
 }
 
 textarea{
