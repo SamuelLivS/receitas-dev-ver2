@@ -65,7 +65,7 @@ nav {
 }
 
 .nav-list li a:hover {
-    opacity: .8;
+    color: var(--var-cian);
 }
 
 .nav-list li a::after {
@@ -73,7 +73,7 @@ nav {
     display: block;
     width: 0;
     height: 1px;
-    background: rgba(255, 255, 255, .7);
+    background: var(--var-cian);
     transition: width .3s;
 }
 
@@ -126,7 +126,7 @@ nav {
 
 .hidden {
     overflow-Y: hidden;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 
